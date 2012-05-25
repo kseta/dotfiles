@@ -1,0 +1,9 @@
+bundle/
+*.pyc
+*.swp
+*.bak
+.svn
+*.log
+.subversion/auth
+.subversion/servers
+.viminfo

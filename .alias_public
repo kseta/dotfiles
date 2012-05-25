@@ -1,0 +1,7 @@
+#aliases
+alias hg="hg --encoding=utf-8"
+alias la="ls -la"
+alias ll="ls -l"
+alias pa="ps -alx"
+alias jmeter="$LIB_BASE/frameworks/jmeter/bin/jmeter"
+alias selenium="java -jar $LIB_BASE/lib/selenium.jar"

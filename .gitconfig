@@ -1,0 +1,39 @@
+[user]
+    name = "keigo seta"
+    email = keigo.seta@gmail.com
+[color]
+    status = auto
+    diff = auto
+    branch = auto
+    interactive = auto
+    grep = auto
+[push]
+    default = tracking
+[core]
+    excludesfile = ~/.gitignore
+    autocrlf = input
+    editor = vim
+[alias]
+    co = checkout
+    cm = commit -m
+    br = branch
+    ba = branch -a
+    st = status
+    sh = show
+    so = remote show origin
+    lr = log origin
+    wc = whatchanged
+    log-graph = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
+    dm = diff master
+    ds = diff --staged
+    dc = diff --cached
+    # mergeの際にconflictが起きたファイルを編集
+    edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
+    # mergeの際にconflictが起きたファイルをadd
+    add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+    log-graph = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
+    log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
+    unstage = reset HEAD --
+    #git svn
+    spull = svn rebase
+    spush = svn dcommit
