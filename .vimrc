@@ -114,6 +114,9 @@ Bundle 'gitv'
 " A git commit browser / git log wrapper that extends fugitive.vim.
 Bundle 'extradite.vim'
 
+" diff and merge two directories recursively
+Bundle 'DirDiff.vim'
+
 filetype plugin indent on
 
 " ----------------------------------------
