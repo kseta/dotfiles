@@ -111,6 +111,8 @@ Bundle 'superbrothers/vim-vimperator'
 " 'gitk clone' plugin for the text editor Vim.
 Bundle 'gitv'
 
+" A git commit browser / git log wrapper that extends fugitive.vim.
+Bundle 'extradite.vim'
 
 filetype plugin indent on
 
