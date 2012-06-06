@@ -108,6 +108,9 @@ Bundle 'kchmck/vim-coffee-script'
 " syntax for vimperatorrc
 Bundle 'superbrothers/vim-vimperator'
 
+" 'gitk clone' plugin for the text editor Vim.
+Bundle 'gitv'
+
 
 filetype plugin indent on
 
