@@ -254,7 +254,7 @@ let g:Align_xstrlen = 3
 
 " ----------------------------------------
 " NERD_commenter.vim
-" ----------------------------------
+" ----------------------------------------
 let g:NERDSpaceDelims = 1
 let g:NERDShutup = 1
 
