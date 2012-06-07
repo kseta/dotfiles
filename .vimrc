@@ -145,7 +145,9 @@ set fileformat=unix
 set wildmenu
 set wildmode=list:full
 set noswapfile
-set clipboard=unnamed,autoselect
+set clipboard+=unnamed,autoselect
+set mouse=a
+set ttymouse=xterm2
 set fileencodings=utf-8,sjis,ucs-bom,iso-2022-jp,cp932,euc-jp,cp20932
 
 " Highlight Zenkaku Space
@@ -218,8 +220,8 @@ nnoremap <space><space> :Unite buffer file_rec<CR>
 noremap <space>r :<C-u>Unite file_mru -buffer-name=file_mru<CR>
 
 " quit with ESC
-au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
-au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
+au FileType unite nnoremap <silent> <buffer> <C-j> :q<CR>
+au FileType unite inoremap <silent> <buffer> <C-j> <ESC><CR>
 
 " ----------------------------------------
 " neocomplcache.vim
