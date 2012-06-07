@@ -37,3 +37,5 @@
     #git svn
     spull = svn rebase
     spush = svn dcommit
+[merge]
+	tool = meld
