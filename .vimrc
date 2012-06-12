@@ -117,6 +117,9 @@ Bundle 'extradite.vim'
 " diff and merge two directories recursively
 Bundle 'DirDiff.vim'
 
+" Inserts matching bracket, paren, brace or quote2
+Bundle 'AutoClose'
+
 filetype plugin indent on
 
 " ----------------------------------------
@@ -316,5 +319,5 @@ nnoremap <C-d> <Del>
 inoremap <C-b> <Backspace>
 inoremap <C-d> <Del>
 
-" ctags
+" Ctags
 nnoremap <C-[> :pop<CR>
