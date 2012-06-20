@@ -117,8 +117,6 @@ Bundle 'extradite.vim'
 " diff and merge two directories recursively
 Bundle 'DirDiff.vim'
 
-" Inserts matching bracket, paren, brace or quote2
-Bundle 'AutoClose'
 
 filetype plugin indent on
 
