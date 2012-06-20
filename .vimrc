@@ -142,6 +142,7 @@ set listchars=tab:>-,trail:-
 " Edit
 " ----------------------------------------
 set autoindent smartindent
+set hidden
 set expandtab
 set tabstop=4 softtabstop=4 shiftwidth=4
 set fileformat=unix
@@ -155,7 +156,6 @@ set fileencodings=utf-8,sjis,ucs-bom,iso-2022-jp,cp932,euc-jp,cp20932
 
 " Highlight Zenkaku Space
 scriptencoding utf-8
-
 augroup highlightIdeographicSpace
     autocmd!
     autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=DarkGreen guibg=DarkGreen
@@ -291,6 +291,10 @@ nnoremap <C-e> $
 map <space>b   :bnext<CR>
 map <space>B   :bprevious<CR>
 
+" enable to move when insertmode
+imap <C-h> <LEFT>
+imap <C-l> <RIGHT>
+
 " go to another window
 nnoremap <space>h <C-w>h
 nnoremap <space>j <C-w>j
@@ -305,6 +309,7 @@ nnoremap <space>L <C-w>L
 
 " adjust the window height/width
 nnoremap <space>+ <C-w>5+
+
 nnoremap <space>- <C-w>5-
 nnoremap <space>> <C-w>10>
 nnoremap <space>< <C-w>10<
@@ -313,11 +318,14 @@ nnoremap <space>< <C-w>10<
 inoremap <C-j> <Esc>
 nnoremap <C-j> <Esc>
 
+" ENTER with new line
+noremap <CR> o<ESC>
+
 " Delete
 nnoremap <C-b> x
 nnoremap <C-d> <Del>
 inoremap <C-b> <Backspace>
 inoremap <C-d> <Del>
 
-" Ctags
-nnoremap <C-[> :pop<CR>
+" conma with spave
+inoremap , ,<space>
