@@ -1,121 +1,125 @@
 " ----------------------------------------
 " Vundle
 " ----------------------------------------
-filetype off
+set nocompatible               " be iMproved
+filetype off                   " required!
+filetype plugin indent off     " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  call neobundle#rc(expand('~/.vim/bundle/'))
+endif
 
 " short for Vimbundle and is a Vim plugin manager
-Bundle 'vundle.git'
+NeoBundle 'vundle.git'
 
 " manage plugins
-Bundle 'gmarik/vundle'
+NeoBundle 'gmarik/vundle'
 
 " search files
-Bundle 'unite.vim'
+NeoBundle 'unite.vim'
 
 " git command on vim
-Bundle 'fugitive.vim'
+NeoBundle 'fugitive.vim'
 
 " format codes
-Bundle 'Align'
+NeoBundle 'Align'
 
 " toggle comment outs
-Bundle 'scrooloose/nerdcommenter'
+NeoBundle 'scrooloose/nerdcommenter'
 
 " HTML snippets
-Bundle 'ZenCoding.vim'
+NeoBundle 'ZenCoding.vim'
 
 " tree explorer
-Bundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/nerdtree'
 
 " bettar indentation for JavaScript
-Bundle 'pangloss/vim-javascript'
+NeoBundle 'pangloss/vim-javascript'
 
 " vim reference(<Shift-k>)
-Bundle 'thinca/vim-ref'
+NeoBundle 'thinca/vim-ref'
 
 " quickrun(<SPACE-q>)
-Bundle 'thinca/vim-quickrun'
+NeoBundle 'thinca/vim-quickrun'
 
 " pyflake
-Bundle 'mitechie/pyflakes-pathogen'
+NeoBundle 'mitechie/pyflakes-pathogen'
 
 " TDD
-Bundle 'reinh/vim-makegreen'
+NeoBundle 'reinh/vim-makegreen'
 
 " TDD in python
-Bundle 'lambdalisue/nose.vim'
+NeoBundle 'lambdalisue/nose.vim'
 
 " Python complete
-Bundle 'vim-scripts/pythoncomplete'
+NeoBundle 'vim-scripts/pythoncomplete'
 
 " Django Support
-Bundle 'lambdalisue/vim-django-support'
+NeoBundle 'lambdalisue/vim-django-support'
 
 " Refactoring in python
-Bundle 'sontek/rope-vim'
+NeoBundle 'sontek/rope-vim'
 
 " indent guides
-Bundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'nathanaelkane/vim-indent-guides'
 
 " tagbar(<F8>)
-Bundle 'majutsushi/tagbar'
+NeoBundle 'majutsushi/tagbar'
 
 " Allows one to edit a file with prevledges from an unprivledged session
-Bundle 'sudo.vim'
+NeoBundle 'sudo.vim'
 
 " complete keys
-Bundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neocomplcache'
 
 " complete snippets
-Bundle 'Shougo/neocomplcache-snippets-complete'
+NeoBundle 'Shougo/neocomplcache-snippets-complete'
 
 " Build the trinity of srcexpl, taglist, NERD_tree to be a good IDE
-Bundle 'trinity.vim'
+NeoBundle 'trinity.vim'
 
 " Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc)
-Bundle 'taglist.vim'
+NeoBundle 'taglist.vim'
 
 " A Source code Explorer based on tags works like context window in Source Insight
-Bundle 'Source-Explorer-srcexpl.vim'
+NeoBundle 'Source-Explorer-srcexpl.vim'
 
 " A project which translate Vim documents into Japanese
-Bundle 'vim-jp/vimdoc-ja'
+NeoBundle 'vim-jp/vimdoc-ja'
 
 " Difference between two blocks (functions etc...)
-Bundle 'adie/BlockDiff'
+NeoBundle 'adie/BlockDiff'
 
 " Delete/change/add parentheses/quotes/XML-tags/much more with ease
-Bundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-surround'
 
 " An extensible & universal comment plugin that also handles embedded filetypes
-Bundle 'tomtom/tcomment_vim'
+NeoBundle 'tomtom/tcomment_vim'
 
 " Maintains a history of previous yanks, changes and deletes
-Bundle 'YankRing.vim'
+NeoBundle 'YankRing.vim'
 
 " Show diff  when commiting changes on a subversion repository
-Bundle 'svn-diff.vim'
+NeoBundle 'svn-diff.vim'
 
 " Power to the status line
-Bundle 'Lokaltog/vim-powerline'
+NeoBundle 'Lokaltog/vim-powerline'
 
 " syntax and indent for coffee script
-Bundle 'kchmck/vim-coffee-script'
+NeoBundle 'kchmck/vim-coffee-script'
 
 " syntax for vimperatorrc
-Bundle 'superbrothers/vim-vimperator'
+NeoBundle 'superbrothers/vim-vimperator'
 
 " 'gitk clone' plugin for the text editor Vim.
-Bundle 'gitv'
+NeoBundle 'gitv'
 
 " A git commit browser / git log wrapper that extends fugitive.vim.
-Bundle 'extradite.vim'
+NeoBundle 'extradite.vim'
 
 " diff and merge two directories recursively
-Bundle 'DirDiff.vim'
+NeoBundle 'DirDiff.vim'
 
 
 filetype plugin indent on
