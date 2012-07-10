@@ -19,6 +19,9 @@ NeoBundle 'gmarik/vundle'
 " search files
 NeoBundle 'unite.vim'
 
+" just like a common shell so you should be able to use it intuitively
+NeoBundle 'Shougo/vimshell'
+
 " git command on vim
 NeoBundle 'fugitive.vim'
 
