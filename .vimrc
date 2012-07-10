@@ -1,9 +1,9 @@
 " ----------------------------------------
 " Vundle
 " ----------------------------------------
-set nocompatible               " be iMproved
-filetype off                   " required!
-filetype plugin indent off     " required!
+set nocompatible
+filetype off
+filetype plugin indent off
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
