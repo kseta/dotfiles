@@ -154,7 +154,7 @@ set fileformat=unix
 set wildmenu
 set wildmode=list:full
 set noswapfile
-set clipboard+=unnamed,autoselect
+set clipboard=unnamed,autoselect
 set mouse=a
 set ttymouse=xterm2
 set fileencodings=utf-8,sjis,ucs-bom,iso-2022-jp,cp932,euc-jp,cp20932
