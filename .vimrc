@@ -300,6 +300,9 @@ map <space>B   :bprevious<CR>
 imap <C-h> <LEFT>
 imap <C-l> <RIGHT>
 
+" leave insertmode
+autocmd InsertLeave * set nopaste
+
 " go to another window
 nnoremap <space>h <C-w>h
 nnoremap <space>j <C-w>j
