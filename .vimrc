@@ -334,6 +334,3 @@ nnoremap <C-b> x
 nnoremap <C-d> <Del>
 inoremap <C-b> <Backspace>
 inoremap <C-d> <Del>
-
-" conma with spave
-inoremap , ,<space>
