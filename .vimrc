@@ -328,9 +328,3 @@ nnoremap <C-j> <Esc>
 
 " ENTER with new line
 noremap <CR> o<ESC>
-
-" Delete
-nnoremap <C-b> x
-nnoremap <C-d> <Del>
-inoremap <C-b> <Backspace>
-inoremap <C-d> <Del>
