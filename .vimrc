@@ -222,7 +222,7 @@ nnoremap <Esc><Esc> :nohlsearch<CR>
 let g:unite_enable_start_insert = 1
 
 " open unite buffer
-nnoremap <space><space> :Unite buffer file_rec<CR>
+nnoremap <space>f :Unite buffer file_rec<CR>
 
 " open recent files
 noremap <space>r :<C-u>Unite file_mru -buffer-name=file_mru<CR>
@@ -288,13 +288,9 @@ let g:yankring_history_dir = expand('$HOME/Log/Vim')
 " reload .vimrc
 nnoremap <space>R :source ~/.vimrc<CR>
 
-" move to line head/end like mac
-nnoremap <C-a> 0
-nnoremap <C-e> $
-
 " move to buffer
 map <space>b   :bnext<CR>
-map <space>B   :bprevious<CR>
+map <space>n   :bprevious<CR>
 
 " enable to move when insertmode
 imap <C-h> <LEFT>
@@ -325,6 +321,3 @@ nnoremap <space>< <C-w>10<
 " ESC
 inoremap <C-j> <Esc>
 nnoremap <C-j> <Esc>
-
-" ENTER with new line
-noremap <CR> o<ESC>
