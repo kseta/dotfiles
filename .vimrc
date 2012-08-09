@@ -62,7 +62,7 @@ NeoBundle 'vim-scripts/pythoncomplete'
 NeoBundle 'lambdalisue/vim-django-support'
 
 " Refactoring in python
-NeoBundle 'sontek/rope-vim'
+"NeoBundle 'sontek/rope-vim'
 
 " indent guides
 NeoBundle 'nathanaelkane/vim-indent-guides'
@@ -158,6 +158,7 @@ set clipboard=unnamed,autoselect
 set mouse=a
 set ttymouse=xterm2
 set fileencodings=utf-8,sjis,ucs-bom,iso-2022-jp,cp932,euc-jp,cp20932
+set imdisable
 
 " Highlight Zenkaku Space
 scriptencoding utf-8
