@@ -160,6 +160,9 @@ set ttymouse=xterm2
 set fileencodings=utf-8,sjis,ucs-bom,iso-2022-jp,cp932,euc-jp,cp20932
 set imdisable
 
+" Copy to clipboard
+vmap <C-y> :w !xsel -ib<CR><CR>
+
 " Highlight Zenkaku Space
 scriptencoding utf-8
 augroup highlightIdeographicSpace
