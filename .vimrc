@@ -286,6 +286,7 @@ let g:quickrun_config['*'] = {'runmode': "async:remote:python", 'split':'below'}
 " ----------------------------------------
 let g:yankring_manual_clipboard_check = 0
 let g:yankring_history_dir = expand('$HOME/Log/Vim')
+let g:yankring_n_keys = 'Y D'
 
 " ----------------------------------------
 " Other Key Mappings
@@ -326,3 +327,6 @@ nnoremap <space>< <C-w>10<
 " ESC
 inoremap <C-j> <Esc>
 nnoremap <C-j> <Esc>
+
+" insert black-hole register by x
+nnoremap x "_x
