@@ -319,7 +319,6 @@ nnoremap <space>L <C-w>L
 
 " adjust the window height/width
 nnoremap <space>+ <C-w>5+
-
 nnoremap <space>- <C-w>5-
 nnoremap <space>> <C-w>10>
 nnoremap <space>< <C-w>10<
