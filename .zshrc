@@ -60,9 +60,9 @@ esac
 
 ## Keybind configuration
 #
-# Vi like keybind
+# Emacs like keybind
 #
-bindkey -v
+bindkey -e
 
 # historical backward/forward search with linehead string binded to ^P/^N
 #
