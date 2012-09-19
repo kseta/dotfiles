@@ -20,14 +20,7 @@ case ${UID} in
 *)
     PROMPT="%m:%n%% "
     RPROMPT="[%~]"
-    #RPROMPT="%{[33m%[%~][m%} "
     SPROMPT="%{[31m%}%r is correct? [n,y,a,e]:%{[m%} "
-    #PROMPT="%{[31m%}%/%%%{[m%} "
-    #PROMPT2="%{[31m%}%_%%%{[m%} "
-    #SPROMPT="%{[31m%}%r is correct? [n,y,a,e]:%{[m%} "
-    #[ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
-    #    PROMPT="%{[37m%}${HOST%%.*} ${PROMPT}"
-    #;;
 esac
 setopt transient_rprompt
 
