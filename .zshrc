@@ -104,12 +104,29 @@ kterm*|xterm)
     ;;
 esac
 
+## Google
+#
+function google() {
+  local str opt 
+  if [ $# != 0 ]; then # 引数が存在すれば
+    for i in $*; do
+      str="$str+$i"
+    done    
+    str=`echo $str | sed 's/^\+//'` #先頭の「+」を削除
+    opt='search?num=50&hl=ja&ie=euc-jp&oe=euc-jp&lr=lang_ja'
+    opt="${opt}&q=${str}"
+  fi
+  google-chrome http://www.google.co.jp/$opt #引数がなければ $opt は空になる
+  # mozilla -remote openURL\(http::/www.google.co.jp/$opt\) # 未テスト
+}
+alias ggl=google
+
 ## Alias configuration
 #
 alias where="command -v"
 alias j="jobs -l"
 
-alias ls="ls -G -w"
+alias ls="ls -G"
 alias la="ls -a"
 alias lf="ls -F"
 alias ll="ls -l"
