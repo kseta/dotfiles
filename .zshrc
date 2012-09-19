@@ -29,6 +29,7 @@ case ${UID} in
     #    PROMPT="%{[37m%}${HOST%%.*} ${PROMPT}"
     #;;
 esac
+setopt transient_rprompt
 
 # auto change directory
 #
