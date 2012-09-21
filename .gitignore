@@ -7,3 +7,4 @@ bundle/
 .subversion/auth
 .subversion/servers
 .viminfo
+.zsh_history
