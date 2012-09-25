@@ -232,6 +232,9 @@ nnoremap <space>f :Unite buffer file_rec<CR>
 " open recent files
 noremap <space>r :<C-u>Unite file_mru -buffer-name=file_mru<CR>
 
+" open snippt files
+imap <C-w> <Plug>(neocomplcache_start_unite_snippet)
+
 " quit with ESC
 au FileType unite nnoremap <silent> <buffer> <C-j> :q<CR>
 au FileType unite inoremap <silent> <buffer> <C-j> <ESC><CR>
