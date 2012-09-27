@@ -22,6 +22,9 @@ NeoBundle 'unite.vim'
 " just like a common shell so you should be able to use it intuitively
 NeoBundle 'Shougo/vimshell'
 
+" Interactive command execution in Vim.
+NeoBundle 'Shougo/vimproc.git'
+
 " git command on vim
 NeoBundle 'fugitive.vim'
 
