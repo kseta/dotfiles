@@ -131,6 +131,9 @@ NeoBundle 'DirDiff.vim'
 " Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more
 NeoBundle 'rails.vim'
 
+" for rspec
+NeoBundle 'skwp/vim-rspec'
+
 filetype plugin indent on
 
 " ----------------------------------------
