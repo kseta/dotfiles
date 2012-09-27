@@ -10,6 +10,7 @@ if has('vim_starting')
   call neobundle#rc(expand('~/.vim/bundle/'))
 endif
 
+
 " short for Vimbundle and is a Vim plugin manager
 NeoBundle 'vundle.git'
 
@@ -127,6 +128,8 @@ NeoBundle 'extradite.vim'
 " diff and merge two directories recursively
 NeoBundle 'DirDiff.vim'
 
+" Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more
+NeoBundle 'rails.vim'
 
 filetype plugin indent on
 
