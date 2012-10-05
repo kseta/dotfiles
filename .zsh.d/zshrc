@@ -150,7 +150,7 @@ prompt_bar_left="${prompt_bar_left_self}${prompt_bar_left_date}"
 ###   %{%B%}...%{%b%}: 「...」を太字にする。
 ###   %#: 一般ユーザなら「%」、rootユーザなら「#」になる。
 #prompt_left="-[%h]%(1j,(%j),)%{%B%}%#%{%b%} "
-prompt_left="[%n]%(1j,(%j),)%{%B%}%#%{%b%} "
+prompt_left="[%n@%m]%(1j,(%j),)%{%B%}%#%{%b%} "
 
 ## プロンプトフォーマットを展開した後の文字数を返す。
 ## 日本語未対応。
