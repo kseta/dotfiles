@@ -23,7 +23,7 @@ cd ..
 zle reset-prompt
 }
 zle -N cdup
-bindkey '\^' cdup
+#bindkey '\^' cdup
 
 # ディレクトリ移動
 ## ディレクトリ名だけでcdする。
