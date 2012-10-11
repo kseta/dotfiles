@@ -352,7 +352,7 @@ alias -g T='| tail'
 alias -g S='| sed'
 
 ## 完全に削除。
-alias rr="command rm -rf"
+alias rr="rm -rf"
 ## ファイル操作を確認する。
 alias rm="rm -i"
 alias cp="cp -i"
@@ -371,7 +371,7 @@ case $(uname) in
 	    alias ls="gnuls"
 	    alias la="ls -lhAF --color=auto"
 	else
-	    alias la="ls -lhAFG"
+	    alias la="ls -lhAFG --color=auto"
 	fi
 	alias ps="ps -fU$(whoami)"
 	;;
