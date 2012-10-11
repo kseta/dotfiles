@@ -365,6 +365,7 @@ alias po="popd"
 ## lsとpsの設定
 ### ls: できるだけGNU lsを使う。
 ### ps: 自分関連のプロセスのみ表示。
+alias ls="ls --color=auto"
 case $(uname) in
     *BSD|Darwin)
 	if [ -x "$(which gnuls)" ]; then
