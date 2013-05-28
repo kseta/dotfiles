@@ -15,8 +15,9 @@
     editor = vim
 	pager = lv -c
 [alias]
+    commit = commit -v
+    cm = commit -v
     co = checkout
-    cm = commit -m
     br = branch
     ba = branch -a
     st = status
