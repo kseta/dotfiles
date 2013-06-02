@@ -5,10 +5,14 @@ files=`ls -1Ap | grep "^\.[^./]\{1,\}$"`
 
 # create symlinks
 for file in $files; do
-	if [ -f "$HOME/$file" ]; then
-		continue
-	fi
+    if [ -f "$HOME/$file" ]; then
+        continue
+    fi
 
-	echo "> create symlink to $HOME/$file"
-	ln -s $PWD/$file $HOME/$file
+    echo "> create symlink to $HOME/$file"
+    ln -s $PWD/$file $HOME/$file
 done
+
+# neobundle
+echo `mkdir -p $HOME/src/dotfiles/.vim/bundle`
+echo `git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim`
