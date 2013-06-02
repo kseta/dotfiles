@@ -2,10 +2,11 @@
 
 # get dotfiles list
 files=`ls -1Ap | grep "^\.[^./]\{1,\}$"`
+files="$files .vim"
 
 # create symlinks
 for file in $files; do
-    if [ -f "$HOME/$file" ]; then
+    if [ -e "$HOME/$file" ]; then
         continue
     fi
 
