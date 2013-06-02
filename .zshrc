@@ -1,10 +1,16 @@
-#source ~/.zsh.d/zshrc
-#_Z_CMD=j
-#source ~/.zsh/z.sh
-#precmd() {
-#  _z --add "$(pwd -P)"
-#}
-# (d) is default on
+# ------------------------------
+# Z Settings
+# ------------------------------
+if which brew > /dev/null; then
+  _Z_CMD=j
+  source $(brew --prefix)/etc/profile.d/z.sh
+fi
+
+# ------------------------------
+# Boxen Settings
+# ------------------------------
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+[ -f /opt/boxen/nvm/nvm.sh ] && source /opt/boxen/nvm/nvm.sh
 
 # ------------------------------
 # General Settings
@@ -40,9 +46,9 @@ setopt extended_glob # グロブ機能を拡張する
 unsetopt caseglob    # ファイルグロブで大文字小文字を区別しない
 
 ### History ###
-HISTFILE=~/.zsh_history   # ヒストリを保存するファイル
-HISTSIZE=10000            # メモリに保存されるヒストリの件数
-SAVEHIST=10000            # 保存されるヒストリの件数
+HISTFILE=~/src/dotfiles/log/.zsh_history   # ヒストリを保存するファイル
+HISTSIZE=100000           # メモリに保存されるヒストリの件数
+SAVEHIST=100000           # 保存されるヒストリの件数
 setopt bang_hist          # !を使ったヒストリ展開を行う(d)
 setopt extended_history   # ヒストリに実行時間も保存する
 setopt hist_ignore_dups   # 直前と同じコマンドはヒストリに追加しない
