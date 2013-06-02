@@ -8,3 +8,4 @@ bundle/
 .subversion/servers
 .viminfo
 .zsh_history
+log/*

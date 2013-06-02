@@ -297,7 +297,7 @@ let g:quickrun_config['*'] = {'runmode': "async:remote:python", 'split':'below'}
 " YankRing.vim
 " ----------------------------------------
 let g:yankring_manual_clipboard_check = 0
-let g:yankring_history_dir = expand('$HOME/Log/Vim')
+let g:yankring_history_dir = expand('$HOME/src/dotfiles/log/')
 let g:yankring_n_keys = 'Y D'
 
 " ----------------------------------------
