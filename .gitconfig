@@ -13,7 +13,6 @@
     excludesfile = ~/.gitignore
     autocrlf = input
     editor = vim
-	pager = lv -c
 [alias]
     commit = commit -v
     cm = commit -v
