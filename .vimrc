@@ -134,6 +134,9 @@ NeoBundle 'rails.vim'
 " for rspec
 NeoBundle 'skwp/vim-rspec'
 
+" Syntax Highlighting for Puppet
+NeoBundle 'itorres/puppet-syntax-highlighting'
+
 filetype plugin indent on
 
 " ----------------------------------------
