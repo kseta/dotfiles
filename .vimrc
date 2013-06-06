@@ -81,7 +81,7 @@ NeoBundle 'sudo.vim'
 NeoBundle 'Shougo/neocomplcache'
 
 " complete snippets
-NeoBundle 'Shougo/neocomplcache-snippets-complete'
+NeoBundle 'Shougo/neosnippet'
 
 " Build the trinity of srcexpl, taglist, NERD_tree to be a good IDE
 NeoBundle 'trinity.vim'
@@ -244,9 +244,6 @@ nnoremap <space>f :Unite buffer file_rec<CR>
 " open recent files
 noremap <space>r :<C-u>Unite file_mru -buffer-name=file_mru<CR>
 
-" open snippt files
-imap <C-w> <Plug>(neocomplcache_start_unite_snippet)
-
 " quit with ESC
 au FileType unite nnoremap <silent> <buffer> <C-j> :q<CR>
 au FileType unite inoremap <silent> <buffer> <C-j> <ESC><CR>
@@ -254,18 +251,23 @@ au FileType unite inoremap <silent> <buffer> <C-j> <ESC><CR>
 " ----------------------------------------
 " neocomplcache.vim
 " ----------------------------------------
-let g:neocomplcache_enable_at_startup = 1
+" plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
 
-highlight pmenu     ctermbg=8
-highlight pmenusel  ctermbg=1
-highlight pmenusbar ctermbg=0
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"
 
-imap <expr><tab> neocomplcache#sources#snippets_complete#expandable() ? "\<plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<c-n>" : "\<tab>"
-smap <expr><tab> neocomplcache#sources#snippets_complete#expandable() ? "\<plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<c-n>" : "\<tab>"
-
-inoremap <expr><cr>  neocomplcache#smart_close_popup()."\<cr>"
-inoremap <expr><C-y> neocomplcache#close_popup()
-inoremap <expr><C-e> neocomplcache#cancel_popup()
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
 
 " ----------------------------------------
 " vim-indent-gides.vim
