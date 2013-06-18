@@ -12,3 +12,8 @@ if which brew > /dev/null; then
   source $(brew --prefix)/etc/profile.d/z.sh
 fi
 
+# ------------------------------
+# PhpBrew Settings
+# ------------------------------
+export PHPBREW_SET_PROMPT=1
+[[ -s "$HOME/.phpbrew/bashrc" ]] && source "$HOME/.phpbrew/bashrc"
