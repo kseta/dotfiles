@@ -137,6 +137,9 @@ NeoBundle 'skwp/vim-rspec'
 " Syntax Highlighting for Puppet
 NeoBundle 'itorres/puppet-syntax-highlighting'
 
+" Vim motions on speed!
+NeoBundle 'Lokaltog/vim-easymotion'
+
 filetype plugin indent on
 
 " ----------------------------------------
