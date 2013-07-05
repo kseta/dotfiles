@@ -302,6 +302,15 @@ let g:quickrun_config = {}
 let g:quickrun_config['*'] = {'runmode': "async:remote:python", 'split':'below'}
 
 " ----------------------------------------
+" Easymotion
+" ----------------------------------------
+let g:EasyMotion_keys='hjklasdfgyuiopqwertnmzxcvbHJKLASDFGYUIOPQWERTNMZXCVB'
+let g:EasyMotion_leader_key="'"
+let g:EasyMotion_grouping=1
+hi EasyMotionTarget ctermbg=none ctermfg=red
+hi EasyMotionShade  ctermbg=none ctermfg=blue
+
+" ----------------------------------------
 " YankRing.vim
 " ----------------------------------------
 let g:yankring_manual_clipboard_check = 0
