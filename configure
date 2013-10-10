@@ -16,6 +16,6 @@ done
 
 # neobundle
 if [ -f "$HOME/.vim/bundle/neobundle.vim" ]; then
-    echo `mkdir -p $HOME/src/dotfiles/.vim/bundle`
+    echo `mkdir -p /src/dotfiles/.vim/bundle`
     echo `git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim`
 fi
