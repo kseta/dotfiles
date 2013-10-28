@@ -32,7 +32,7 @@ setopt extended_glob # グロブ機能を拡張する
 unsetopt caseglob    # ファイルグロブで大文字小文字を区別しない
 
 ### History ###
-HISTFILE=~/src/dotfiles/log/.zsh_history   # ヒストリを保存するファイル
+HISTFILE=/src/dotfiles/log/.zsh_history   # ヒストリを保存するファイル
 HISTSIZE=100000           # メモリに保存されるヒストリの件数
 SAVEHIST=100000           # 保存されるヒストリの件数
 setopt bang_hist          # !を使ったヒストリ展開を行う(d)
