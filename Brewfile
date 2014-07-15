@@ -44,5 +44,4 @@ cask install google-chrome
 cask install google-drive
 cask install google-hangouts
 cask install google-japanese-ime
-brew cask alfred link
 cleanup
