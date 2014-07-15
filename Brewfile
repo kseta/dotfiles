@@ -4,6 +4,7 @@ upgrade
 # Add Repository
 tap homebrew/binary
 tap caskroom/homebrew-cask
+tap sanemat/font
 # Packages for development
 install vim
 install imagemagick
@@ -33,6 +34,7 @@ install mcrypt
 install gmp
 install libevent
 install brew-cask
+install ricty
 cask install adobe-reader
 cask install cyberduck
 cask install dropbox
