@@ -14,9 +14,6 @@ endif
 " short for Vimbundle and is a Vim plugin manager
 NeoBundle 'vundle.git'
 
-" manage plugins
-NeoBundle 'gmarik/vundle'
-
 " search files
 NeoBundle 'unite.vim'
 
