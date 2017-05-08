@@ -10,7 +10,6 @@
 [push]
     default = tracking
 [core]
-    excludesfile = /opt/boxen/config/git/gitignore
     autocrlf = input
     editor = vim
 [alias]
@@ -40,9 +39,6 @@
     spush = svn dcommit
 [merge]
 	tool = meld
-
-[credential]
-helper = /opt/boxen/bin/boxen-git-credential
 
 [hub]
 protocol = https
