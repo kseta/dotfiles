@@ -21,7 +21,7 @@
      fi
 
      has git && symlink "$dotfiles/home/.gitconfig" "$HOME/.gitconfig"
-     has git && symlink "$dotfiles/home/.zshrc" "$HOME/.zshenv"
+     has git && symlink "$dotfiles/home/.zsenv" "$HOME/.zshenv"
      has git && symlink "$dotfiles/home/.zshrc" "$HOME/.zshrc"
      has vim && symlink "$dotfiles/home/.vimrc" "$HOME/.vimrc"
  }
