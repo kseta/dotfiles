@@ -1,4 +1,9 @@
 # ------------------------------
+# PATH Settings
+# ------------------------------
+export PATH=/usr/local/bin:$PATH
+
+# ------------------------------
 # Z Settings
 # ------------------------------
 if which brew > /dev/null; then
@@ -12,7 +17,3 @@ fi
 export PHPBREW_SET_PROMPT=1
 [[ -s "$HOME/.phpbrew/bashrc" ]] && source "$HOME/.phpbrew/bashrc"
 
-# ------------------------------
-# PATH Settings
-# ------------------------------
-export PATH=/usr/local/bin:$PATH
