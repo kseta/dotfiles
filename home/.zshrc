@@ -32,9 +32,9 @@ setopt extended_glob # グロブ機能を拡張する
 unsetopt caseglob    # ファイルグロブで大文字小文字を区別しない
 
 ### History ###
-HISTFILE=/src/dotfiles/log/.zsh_history   # ヒストリを保存するファイル
-HISTSIZE=100000           # メモリに保存されるヒストリの件数
-SAVEHIST=100000           # 保存されるヒストリの件数
+HISTFILE=$HOME/.ghq/github.com/kseta/dotfiles/log/.zsh_history   # ヒストリを保存するファイル
+HISTSIZE=100000000        # メモリに保存されるヒストリの件数
+SAVEHIST=100000000        # 保存されるヒストリの件数
 setopt bang_hist          # !を使ったヒストリ展開を行う(d)
 setopt extended_history   # ヒストリに実行時間も保存する
 setopt hist_ignore_dups   # 直前と同じコマンドはヒストリに追加しない
@@ -95,7 +95,7 @@ SPROMPT=$tmp_sprompt  # スペル訂正用プロンプト
 
 ### Title (user@hostname) ###
 case "${TERM}" in
-kterm*|xterm*|)
+(kterm*|xterm*|)
   precmd() {
     echo -ne "\033]0;${USER}@${HOST%%.*}\007"
   }
@@ -106,23 +106,6 @@ esac
 # ------------------------------
 # Other Settings
 # ------------------------------
-### RVM ###
-if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
-
-### Macports ###
-case "${OSTYPE}" in
-  darwin*)
-    export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-    export MANPATH=/opt/local/share/man:/opt/local/man:$MANPATH
-  ;;
-esac
 
 ### Aliases ###
-alias r=rails
-alias v=vim
 alias la='ls -la'
-
-# cdコマンド実行後、lsを実行する
-#function cd() {
-#  builtin cd $@ && ls;
-#}
