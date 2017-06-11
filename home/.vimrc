@@ -327,7 +327,7 @@ hi EasyMotionShade  ctermbg=none ctermfg=blue
 " YankRing.vim
 " ----------------------------------------
 let g:yankring_manual_clipboard_check = 0
-let g:yankring_history_dir = expand('/Users/kseta/.ghq/github.com/kseta/dotfiles/log/')
+let g:yankring_history_dir = expand('~/.homesick/repos/dotfiles/log/')
 let g:yankring_n_keys = 'Y D'
 
 " ----------------------------------------
