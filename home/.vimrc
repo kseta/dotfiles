@@ -5,11 +5,15 @@ set nocompatible
 filetype off
 filetype plugin indent off
 
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#rc(expand('~/.vim/bundle/'))
-endif
+" Required:
+set runtimepath+=~/.vim/bundle/neobundle.vim/
 
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 " short for Vimbundle and is a Vim plugin manager
 NeoBundle 'vundle.git'
@@ -19,9 +23,6 @@ NeoBundle 'unite.vim'
 
 " just like a common shell so you should be able to use it intuitively
 NeoBundle 'Shougo/vimshell'
-
-" Interactive command execution in Vim.
-NeoBundle 'Shougo/vimproc.git'
 
 " git command on vim
 NeoBundle 'fugitive.vim'
@@ -58,12 +59,6 @@ NeoBundle 'lambdalisue/nose.vim'
 
 " Python complete
 NeoBundle 'vim-scripts/pythoncomplete'
-
-" Django Support
-NeoBundle 'lambdalisue/vim-django-support'
-
-" Refactoring in python
-"NeoBundle 'sontek/rope-vim'
 
 " indent guides
 NeoBundle 'nathanaelkane/vim-indent-guides'
@@ -128,6 +123,9 @@ NeoBundle 'DirDiff.vim'
 " Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more
 NeoBundle 'rails.vim'
 
+" A color scheme based on the RailsCasts TextMate theme with decent support for both GUI and terminal.
+NeoBundle 'jpo/vim-railscasts-theme'
+
 " for rspec
 NeoBundle 'skwp/vim-rspec'
 
@@ -136,6 +134,11 @@ NeoBundle 'itorres/puppet-syntax-highlighting'
 
 " Vim motions on speed!
 NeoBundle 'Lokaltog/vim-easymotion'
+
+" Quantify your coding inside Vim.
+NeoBundle 'wakatime/vim-wakatime'
+
+call neobundle#end()
 
 filetype plugin indent on
 
@@ -178,11 +181,11 @@ vmap <C-c> :w !xsel -ib<CR><CR>
 
 " Highlight Zenkaku Space
 scriptencoding utf-8
-augroup highlightIdeographicSpace
-    autocmd!
-    autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=DarkGreen guibg=DarkGreen
-    autocmd VimEnter,WinEnter * match IdeographicSpace /　/
-augroup END
+"augroup highlightIdeographicSpace
+"    autocmd!
+"    autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=DarkGreen guibg=DarkGreen
+"    autocmd VimEnter,WinEnter * match IdeographicSpace /　/
+"augroup END
 
 " ----------------------------------------
 " Skelton
@@ -324,7 +327,7 @@ hi EasyMotionShade  ctermbg=none ctermfg=blue
 " YankRing.vim
 " ----------------------------------------
 let g:yankring_manual_clipboard_check = 0
-let g:yankring_history_dir = expand('/src/dotfiles/log/')
+let g:yankring_history_dir = expand('/Users/kseta/.ghq/github.com/kseta/dotfiles/log/')
 let g:yankring_n_keys = 'Y D'
 
 " ----------------------------------------
