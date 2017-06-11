@@ -12,6 +12,7 @@
 [core]
     autocrlf = input
     editor = vim
+    excludesfile = /Users/kseta/.gitignore_global
 [alias]
     commit = commit -v
     cm = commit -v
