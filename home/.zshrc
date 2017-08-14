@@ -32,9 +32,9 @@ setopt extended_glob # グロブ機能を拡張する
 unsetopt caseglob    # ファイルグロブで大文字小文字を区別しない
 
 ### History ###
-HISTFILE=$HOME/.ghq/github.com/kseta/dotfiles/log/.zsh_history   # ヒストリを保存するファイル
-HISTSIZE=100000000        # メモリに保存されるヒストリの件数
-SAVEHIST=100000000        # 保存されるヒストリの件数
+export HISTFILE=$HOME/.homesick/repos/dotfiles/log/.zsh_history   # ヒストリを保存するファイル
+export HISTSIZE=100000000        # メモリに保存されるヒストリの件数
+export SAVEHIST=100000000        # 保存されるヒストリの件数
 setopt bang_hist          # !を使ったヒストリ展開を行う(d)
 setopt extended_history   # ヒストリに実行時間も保存する
 setopt hist_ignore_dups   # 直前と同じコマンドはヒストリに追加しない
