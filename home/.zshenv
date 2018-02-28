@@ -9,6 +9,8 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # ------------------------------
 # Z Settings
