@@ -26,9 +26,14 @@ fi
 export PHPBREW_SET_PROMPT=1
 [[ -s "$HOME/.phpbrew/bashrc" ]] && source "$HOME/.phpbrew/bashrc"
 
-
 # ------------------------------
 # rbenv Settings
 # ------------------------------
 export PATH="$HOME/.rbenv/shims:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# ------------------------------
+# pyenv-virtualenv Settings
+# ------------------------------
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
