@@ -25,6 +25,7 @@ fi
 # ------------------------------
 export PHPBREW_SET_PROMPT=1
 [[ -s "$HOME/.phpbrew/bashrc" ]] && source "$HOME/.phpbrew/bashrc"
+export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
 
 # ------------------------------
 # rbenv Settings
