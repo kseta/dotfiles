@@ -43,3 +43,6 @@
 
 [hub]
 protocol = https
+
+[ghq]
+    root = ~/Document/ghq
