@@ -45,4 +45,4 @@
 protocol = https
 
 [ghq]
-    root = ~/Document/ghq
+    root = ~/Documents/ghq
