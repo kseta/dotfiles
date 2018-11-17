@@ -10,9 +10,10 @@
 [push]
     default = tracking
 [core]
-    autocrlf = input
+	autoCRLF = false
     editor = vim
-    excludesfile = /Users/kseta/.gitignore_global
+    excludesfile = ~/.gitignore_global
+	ignorecase = false
 [alias]
     commit = commit -v
     cm = commit -v
