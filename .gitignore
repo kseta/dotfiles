@@ -9,3 +9,10 @@ bundle/
 .viminfo
 .zsh_history
 log/*
+
+home/.composer/auth.json
+home/.composer/cache/
+home/.composer/composer.lock
+home/.composer/*.phar
+home/.composer/*.pub
+home/.composer/vendor/
