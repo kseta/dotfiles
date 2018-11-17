@@ -2,6 +2,11 @@
 setopt no_global_rcs
 
 # ------------------------------
+# golang Settings
+# ------------------------------
+export GOPATH=$HOME/go
+
+# ------------------------------
 # PATH Settings
 # ------------------------------
 export PATH="/usr/local/bin:$PATH"
@@ -11,6 +16,8 @@ export PATH="/usr/local/opt/curl/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
+export PATH="$PATH:/usr/local/opt/go/libexec/bin"
+export PATH="$PATH:$GOPATH/bin"
 
 # ------------------------------
 # Z Settings
