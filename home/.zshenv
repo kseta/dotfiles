@@ -10,6 +10,7 @@ export GOPATH=$HOME/go
 # PATH Settings
 # ------------------------------
 export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 # see: http://qiita.com/halo57/items/e7511f3befbcb9fedd6a
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
