@@ -1,146 +1,79 @@
 " ----------------------------------------
-" Vundle
+" dein
 " ----------------------------------------
-set nocompatible
-filetype off
-filetype plugin indent off
+if &compatible
+  set nocompatible               " Be iMproved
+endif
 
 " Required:
-set runtimepath+=~/.vim/bundle/neobundle.vim/
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+if dein#load_state('~/.cache/dein')
+  call dein#begin('~/.cache/dein')
 
-" Let NeoBundle manage NeoBundle
+  " Let dein manage dein
+  " Required:
+  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+  " Add or remove your plugins here like this:
+  "call dein#add('Shougo/neosnippet.vim')
+  "call dein#add('Shougo/neosnippet-snippets')
+
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
+
 " Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" short for Vimbundle and is a Vim plugin manager
-NeoBundle 'vundle.git'
-
-" search files
-NeoBundle 'unite.vim'
-
-" just like a common shell so you should be able to use it intuitively
-NeoBundle 'Shougo/vimshell'
-
-" git command on vim
-NeoBundle 'fugitive.vim'
-
-" format codes
-NeoBundle 'Align'
-
-" toggle comment outs
-NeoBundle 'scrooloose/nerdcommenter'
-
-" HTML snippets
-NeoBundle 'ZenCoding.vim'
-
-" tree explorer
-NeoBundle 'scrooloose/nerdtree'
-
-" bettar indentation for JavaScript
-NeoBundle 'pangloss/vim-javascript'
-
-" vim reference(<Shift-k>)
-NeoBundle 'thinca/vim-ref'
-
-" quickrun(<SPACE-q>)
-NeoBundle 'thinca/vim-quickrun'
-
-" pyflake
-NeoBundle 'mitechie/pyflakes-pathogen'
-
-" TDD
-NeoBundle 'reinh/vim-makegreen'
-
-" TDD in python
-NeoBundle 'lambdalisue/nose.vim'
-
-" Python complete
-NeoBundle 'vim-scripts/pythoncomplete'
-
-" indent guides
-NeoBundle 'nathanaelkane/vim-indent-guides'
-
-" tagbar(<F8>)
-NeoBundle 'majutsushi/tagbar'
-
-" Allows one to edit a file with prevledges from an unprivledged session
-NeoBundle 'sudo.vim'
-
-" complete keys
-NeoBundle 'Shougo/neocomplcache'
-
-" complete snippets
-NeoBundle 'Shougo/neosnippet'
-
-" Build the trinity of srcexpl, taglist, NERD_tree to be a good IDE
-NeoBundle 'trinity.vim'
-
-" Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc)
-NeoBundle 'taglist.vim'
-
-" A Source code Explorer based on tags works like context window in Source Insight
-NeoBundle 'Source-Explorer-srcexpl.vim'
-
-" A project which translate Vim documents into Japanese
-NeoBundle 'vim-jp/vimdoc-ja'
-
-" Difference between two blocks (functions etc...)
-NeoBundle 'adie/BlockDiff'
-
-" Delete/change/add parentheses/quotes/XML-tags/much more with ease
-NeoBundle 'tpope/vim-surround'
-
-" An extensible & universal comment plugin that also handles embedded filetypes
-NeoBundle 'tomtom/tcomment_vim'
-
-" Maintains a history of previous yanks, changes and deletes
-NeoBundle 'YankRing.vim'
-
-" Show diff  when commiting changes on a subversion repository
-NeoBundle 'svn-diff.vim'
-
-" Power to the status line
-NeoBundle 'Lokaltog/vim-powerline'
-
-" syntax and indent for coffee script
-NeoBundle 'kchmck/vim-coffee-script'
-
-" syntax for vimperatorrc
-NeoBundle 'superbrothers/vim-vimperator'
-
-" 'gitk clone' plugin for the text editor Vim.
-NeoBundle 'gitv'
-
-" A git commit browser / git log wrapper that extends fugitive.vim.
-NeoBundle 'extradite.vim'
-
-" diff and merge two directories recursively
-NeoBundle 'DirDiff.vim'
-
-" Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more
-NeoBundle 'rails.vim'
-
-" A color scheme based on the RailsCasts TextMate theme with decent support for both GUI and terminal.
-NeoBundle 'jpo/vim-railscasts-theme'
-
-" for rspec
-NeoBundle 'skwp/vim-rspec'
-
-" Syntax Highlighting for Puppet
-NeoBundle 'itorres/puppet-syntax-highlighting'
-
-" Vim motions on speed!
-NeoBundle 'Lokaltog/vim-easymotion'
-
-" Quantify your coding inside Vim.
-NeoBundle 'wakatime/vim-wakatime'
-
-call neobundle#end()
-
 filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
+
+
+"" just like a common shell so you should be able to use it intuitively
+call dein#add('Shougo/vimshell')
+
+"" git command on vim
+call dein#add('vim-scripts/fugitive.vim')
+
+"" format codes
+call dein#add('vim-scripts/Align')
+
+"" quickrun(<SPACE-q>)
+call dein#add('thinca/vim-quickrun')
+
+"" complete keys
+call dein#add('Shougo/neocomplcache')
+
+"" complete snippets
+call dein#add('Shougo/neosnippet')
+
+"" Delete/change/add parentheses/quotes/XML-tags/much more with ease
+call dein#add('tpope/vim-surround')
+
+"" Maintains a history of previous yanks, changes and deletes
+call dein#add('vim-scripts/YankRing.vim')
+
+"" Power to the status line
+call dein#add('Lokaltog/vim-powerline')
+
+"" Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more
+call dein#add('vim-scripts/rails.vim')
+
+"" A color scheme based on the RailsCasts TextMate theme with decent support for both GUI and terminal.
+call dein#add('jpo/vim-railscasts-theme')
+
+"" Vim motions on speed!
+call dein#add('Lokaltog/vim-easymotion')
+
+"" Quantify your coding inside Vim.
+call dein#add('wakatime/vim-wakatime')
+
 
 " ----------------------------------------
 " Compatibility
@@ -237,21 +170,6 @@ nnoremap N Nzz
 nnoremap <Esc><Esc> :nohlsearch<CR>
 
 " ----------------------------------------
-" unite.vim
-" ----------------------------------------
-let g:unite_enable_start_insert = 1
-
-" open unite buffer
-nnoremap <space>f :Unite buffer file_rec<CR>
-
-" open recent files
-noremap <space>r :<C-u>Unite file_mru -buffer-name=file_mru<CR>
-
-" quit with ESC
-au FileType unite nnoremap <silent> <buffer> <C-j> :q<CR>
-au FileType unite inoremap <silent> <buffer> <C-j> <ESC><CR>
-
-" ----------------------------------------
 " neocomplcache.vim
 " ----------------------------------------
 " Use neocomplcache.
@@ -286,25 +204,9 @@ inoremap <expr><C-y>  neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
 
 " ----------------------------------------
-" vim-indent-gides.vim
-" ----------------------------------------
-let g:indent_guides_auto_colors = 0
-let g:indent_guides_guide_size = 1
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
-
-" ----------------------------------------
 " Align.vim
 " ----------------------------------------
 let g:Align_xstrlen = 3
-
-" ----------------------------------------
-" NERD_commenter.vim
-" ----------------------------------------
-let g:NERDSpaceDelims = 1
-let g:NERDShutup = 1
-
-map <Leader>x <Plug>NERDCommenterToggle
 
 " ----------------------------------------
 " Quickrun
