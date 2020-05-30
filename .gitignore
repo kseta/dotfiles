@@ -16,3 +16,4 @@ home/.composer/composer.lock
 home/.composer/*.phar
 home/.composer/*.pub
 home/.composer/vendor/
+home/.cache
